@@ -10,7 +10,7 @@
 <h2 class="lead">Where do whores go?</h2>
 <%= form_for @whore, url: whores_path do |f| %>
 <%= f.text_field :location, :placeholder => "Whores go...", 
-        :class => "input-medium search-query" %>
+        :class => "input-medium search-query", :autofocus => 'true' %>
   <%= f.submit "Answer", :class => "btn" %>
 <% end %>
 
