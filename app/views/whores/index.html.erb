@@ -1,20 +1,20 @@
 <h1>Where Do Whores Go?</h1>
-
-<blockquote>
+<br>
+<blockquote class="pull-right">
   <p>”<em>Wherever whores go</em>” his father had said. His last words, and what words they were. The crossbow thrummed, Lord Tywin sat back down and Tyrion found himself waddling through the darkness …</p>
   <small>Tywin Lannister, <cite title="Source Title">A Storm of Swords</cite></small>
 </blockquote>
-
+<br>
 <p class="lead">In his later travels Tyrion Lannister often asked, "<em>Where Do Whores Go?</em>"</p>
 
 <h2 class="lead">Where do whores go?</h2>
 <%= form_for @whore, url: whores_path do |f| %>
-<%= f.text_field :location, :placeholder => "Where whores go...", 
+<%= f.text_field :location, :placeholder => "Whores go...", 
         :class => "input-medium search-query" %>
-  <%= f.submit "Submit", :class => "btn" %>
+  <%= f.submit "Answer", :class => "btn" %>
 <% end %>
 
 
 <% @whores.each do |whore| %>
-  <p id="location-<%=whore.id%>"><%= whore.location %></p>
+  <p id="location-<%=whore.id%>" class="well"><%= whore.location %></p>
 <% end %>

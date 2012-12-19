@@ -4,7 +4,8 @@ gem 'rails', '3.2.9'
 gem 'unicorn'
 gem 'sqlite3'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-
+gem 'asin'
+gem 'dotenv', :groups => [:development, :test]
 
 # Gems used only for assets and not required
 # in production environments by default.
