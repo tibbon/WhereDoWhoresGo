@@ -19,17 +19,18 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
   <body>
-
-    <div class="container">
+      <div id="main" class="container">
         <div class="row">
           <div class="span9">
              <%= yield %>
           </div>
         </div>
 
-      <footer>
-        <p>By <a href="https://github.com/tibbon">David Fisher</a>. Released under an MIT License. Code on Github.</p>
-      </footer>
+        <footer class="row">
+          <div class="span9 navbar navbar-fixed-bottom">
+             <p>By <a href="https://github.com/tibbon">David Fisher</a>. Released under an MIT License. Code on <a href="https://github.com/tibbon/WhereDoWhoresGo">Github</a>.</p>
+          </div>
+        </footer>
 
     </div> <!-- /container -->
 
