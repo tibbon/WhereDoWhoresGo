@@ -14,7 +14,11 @@
   <%= f.submit "Answer", :class => "btn" %>
 <% end %>
 
-<h4>The last five whores might have gone...</h4>
+<h4>The last five whores might have gone to...</h4>
 <% @whores.each do |whore| %>
-  <p id="location-<%=whore.id%>" class="well"><%= whore.location %></p>
+<p id="location-<%=whore.id%>" class="well"><%= whore.location %> <small class="pull-right"><%= whore.created_at.strftime("%b %e, %l:%M %p") %></small></p>
 <% end %>
+
+<div class="pull-right">
+  <%= @whore_count %> potential whore locations so far.
+</div>

@@ -2,6 +2,7 @@ class WhoresController < ApplicationController
   def index
     @whore = Whore.new
     @whores = Whore.order("id DESC").limit(5)
+    @whore_count = Whore.count
   end
   
   def create
