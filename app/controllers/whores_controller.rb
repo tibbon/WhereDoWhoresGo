@@ -1,7 +1,7 @@
 class WhoresController < ApplicationController
   def index
     @whore = Whore.new
-    @whores = Whore.order("id DESC").limit(5)
+    @whores = Whore.order("id DESC").page params[:page]
     @whore_count = Whore.count
   end
   
