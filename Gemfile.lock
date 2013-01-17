@@ -53,6 +53,7 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     commonjs (0.2.6)
+    dalli (2.5.0)
     dotenv (0.4.0)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -149,6 +150,7 @@ PLATFORMS
 DEPENDENCIES
   cache_digests
   coffee-rails (~> 3.2.1)
+  dalli
   dotenv
   jquery-rails
   kaminari
