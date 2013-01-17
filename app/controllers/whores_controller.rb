@@ -1,4 +1,6 @@
 class WhoresController < ApplicationController
+  caches_action :index
+  
   def index
     @whore = Whore.new
     @whores = Whore.order("id DESC").page params[:page]
@@ -8,6 +10,7 @@ class WhoresController < ApplicationController
   def create
     @whore = Whore.new(params[:whore])
     if @whore.save
+      expire_action :action => :index
       redirect_to :root
     else
       redirect_to :root
