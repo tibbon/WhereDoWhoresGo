@@ -1,4 +1,5 @@
-<% cache @whores do %>
+<%- params[:page] = 1 unless defined?(params[:page]) -%>
+<% cache @whores, params[:page] do %>
   <h1>Where Do Whores Go?</h1>
   <br>
   <blockquote class="pull-right">
