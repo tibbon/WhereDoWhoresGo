@@ -1,24 +1,26 @@
-<h1>Where Do Whores Go?</h1>
-<br>
-<blockquote class="pull-right">
-  <p>”<em>Wherever whores go</em>” his father had said. His last words, and what words they were. The crossbow thrummed, Lord Tywin sat back down and Tyrion found himself waddling through the darkness …</p>
-  <small>Tywin Lannister, <cite title="Source Title">A Storm of Swords</cite></small>
-</blockquote>
-<br>
-<p class="lead">In his later travels Tyrion Lannister often asked, "<em>Where Do Whores Go?</em>"</p>
+<% cache @whores do %>
+  <h1>Where Do Whores Go?</h1>
+  <br>
+  <blockquote class="pull-right">
+    <p>”<em>Wherever whores go</em>” his father had said. His last words, and what words they were. The crossbow thrummed, Lord Tywin sat back down and Tyrion found himself waddling through the darkness …</p>
+    <small>Tywin Lannister, <cite title="Source Title">A Storm of Swords</cite></small>
+  </blockquote>
+  <br>
+  <p class="lead">In his later travels Tyrion Lannister often asked, "<em>Where Do Whores Go?</em>"</p>
 
-<h2 class="lead">Where do whores go?</h2>
-<%= form_for @whore, url: whores_path do |f| %>
-<%= f.text_field :location, :placeholder => "Whores go...", 
-        :class => "input-medium search-query", :autofocus => 'true' %>
-  <%= f.submit "Answer", :class => "btn" %>
+  <h2 class="lead">Where do whores go?</h2>
+  <%= form_for @whore, url: whores_path do |f| %>
+  <%= f.text_field :location, :placeholder => "Whores go...", 
+          :class => "input-medium search-query", :autofocus => 'true' %>
+    <%= f.submit "Answer", :class => "btn" %>
+  <% end %>
+
+  <h4>The last five whores might have gone to...</h4>
+  <%= render @whores %>
+
+  <%= paginate @whores %>
+
+  <div class="pull-right">
+    <%= @whore_count %> potential whore locations so far.
+  </div>
 <% end %>
-
-<h4>The last five whores might have gone to...</h4>
-<%= render @whores %>
-
-<%= paginate @whores %>
-
-<div class="pull-right">
-  <%= @whore_count %> potential whore locations so far.
-</div>
