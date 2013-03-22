@@ -6,9 +6,9 @@ gem 'unicorn'
 gem 'sqlite3', groups: [:development, :test]
 gem 'pg', groups: [:production]
 gem 'dalli', groups: [:production]
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 gem 'dotenv', groups: [:development, :test]
-gem 'newrelic_rpm'
+gem 'newrelic_rpm',  '3.6', github: 'newrelic/rpm'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'cache_digests'
